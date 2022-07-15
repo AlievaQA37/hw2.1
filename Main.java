@@ -1,11 +1,8 @@
 public class Main {
-        public static void main(String[] args) {
-            int price = 9999 ;
-            int milePrice = 20 ;
-            int mile = price / milePrice ;
-
-            System.out.println("За покупку начислится " + mile + " миль(и)");
-
-    
+    public static void main(String[] args) {
+        BonusMilesService service = new BonusMilesService();
+        int price = 90000;
+        int miles = service.calculate(price);
+        System.out.println(miles);
     }
-  }
+}
